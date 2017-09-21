@@ -1,0 +1,57 @@
+\documentclass[a4paper]{article}
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{ucs}
+\usepackage{exemple}
+\usepackage{graphicx}
+\usepackage{MnSymbol,wasysym}
+\usepackage{hyperref}
+
+
+\formation{L3MI}
+\date{19 Janvier 2017}
+\matiere{Conception Orientée Objet}
+\titre{Picross : base de données}
+
+\newcommand\code[1]{\textsf{#1}}
+\newcommand\srdjan[1]{{\color{red} #1}}
+
+\begin{document}
+
+\entete
+
+\section{Explication générale}
+
+\subsection{Difficultés}
+
+Durant ce tp, je n'ai rencontré de difficulté algorithmique, le jeu du picross étant très simple à coder, et ayant opté pour une solution de résolution des plus simples, qui est de mettre la grille réponse dans une base de données.
+
+Le principale difficulté s'est trouvé dans le graphisme / l'affichage, et dans le chargememnt des données via la base de données car c'était pour moi la première fois que j'utilisais une base de données quelque soit le langage. De plus, il m'a fallut un petit temps pour me rappeler des commandes SQL de base.
+
+\subsection{Graphisme}
+
+Je suis assez fier de l'aspect graphique général de ce projet. J'ai décidé d'au moins réaliser un des TP avec un rendu graphique agréable, et j'ai pour cela décidé d'utiliser le thème du seigneur des anneaux pour réaliser ce TP. Je suis très content de l'aspect du jeu, je trouve avoir réalisé un jeu avec un aspect graphique assez cohérent et qui est agréable à l'oeil.
+
+Etant sur mac, il est possible qu'il y est des problèmes graphiques sur Linux que je ne peux pas détecter, mais sache que le rendu final est cohérent et si jamais tu tombes sur un problème graphique, demande moi simplement un screen d'ou il y a le problème.
+
+
+\subsection{Utilisation}
+
+La base de données pour pouvoir être utilisé doit être importer en localhost, tu trouveras le code à importer dans phpmyadmin dans la racine de ce projet. Une fois le bout de SQL importé, la connexion à la base de données localhost est programmé dans le programme avec le port 8889.
+
+Dans la base de données se tiennent : une table pour enregistré un niveau avec ces inforamtions, une table pour les indices de lignes accroché à un niveau, une table avec les indices de colonnes accroché à un niveau, et finalement une table avec les solutions d'une grille via les index.
+
+Pour l'utilisation en elle-même du jeu, toutes les options ont été réalisés, il est possible de créer une grille de maximum 30 * 30. Avec un affichage qui s'adaptera toujours à la taille de la grille. Une grille doit avoir un nom différent à chaque fois pour pouvoir être créée.
+
+Toutes les navigations de menus sont possibles avec les flèches et le boutons 'entrée' sauf certaines exceptions comme les boutons 'retour' ou 'quitter'.
+
+En jeu, il suffit simplement d'appuyer avec la souris sur une case pour la selectionner / déselectionner. Une case selectionnée apparait en blanche transparente.
+
+Il est aussi possible biensur de supprimer un niveau comme demandé dans les options en appuyer sur la poubelle pendant la selection du niveau.
+Concernant le choix du niveau, il est possible de cliquer sur les flèches ou alors en utilisant les flèches gauche / droite du clavier.
+
+\section{Ajouts}
+
+Tout les ajouts proposés par le TP ont été réalisés.
+
+\end{document}

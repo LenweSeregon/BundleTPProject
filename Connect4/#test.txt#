@@ -1,0 +1,59 @@
+import java.io.*;
+import javax.sound.sampled.*;
+
+
+public class Audio extends Thread{
+
+
+AudioInputStream audioInputStream = null;
+Å†Å†Å†Å†SourceDataLine line;
+Å†Å†Å†Å†Å†
+Å†Å†Å†Å†public void run(){
+Å†Å†Å†Å†Å†Å†Å†Å†File fichier = new File("fichier.wav");
+Å†Å†Å†Å†Å†Å†Å†Å†try {
+Å†Å†Å†Å†Å†Å†Å†Å†AudioFileFormat format = AudioSystem.getAudioFileFormat(fichier);
+Å†Å†Å†Å†Å†Å†Å†Å†} catch (UnsupportedAudioFileException e1) {
+Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†e1.printStackTrace();
+Å†Å†Å†Å†Å†Å†Å†Å†} catch (IOException e1) {
+Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†e1.printStackTrace();
+Å†Å†Å†Å†Å†Å†Å†Å†}
+Å†Å†Å†Å†Å†Å†Å†Å†Å†
+Å†Å†Å†Å†Å†Å†Å†Å†try {
+Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†audioInputStream = AudioSystem.getAudioInputStream(fichier);
+Å†Å†Å†Å†Å†Å†Å†Å†} catch (UnsupportedAudioFileException e) {
+Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†e.printStackTrace();
+Å†Å†Å†Å†Å†Å†Å†Å†} catch (IOException e) {
+Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†e.printStackTrace();
+Å†Å†Å†Å†Å†Å†Å†Å†}
+Å†Å†Å†Å†Å†Å†Å†Å†Å†
+Å†Å†Å†Å†Å†Å†Å†Å†Å†AudioFormat audioFormat = audioInputStream.getFormat();
+Å†Å†Å†Å†Å†Å†Å†Å†Å†DataLine.Info info = new DataLine.Info(SourceDataLine.class,audioFormat);
+Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†
+Å†Å†Å†Å†Å†Å†Å†Å†Å†try {
+Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†line = (SourceDataLine) AudioSystem.getLine(info);
+Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†
+Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†} catch (LineUnavailableException e) {
+Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†e.printStackTrace();
+Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†return;
+Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†}
+Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†
+Å†Å†Å†Å†Å†Å†Å†Å†try {
+Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†line.open(audioFormat);
+Å†Å†Å†Å†Å†Å†Å†Å†} catch (LineUnavailableException e) {
+Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†e.printStackTrace();
+Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†return;
+Å†Å†Å†Å†Å†Å†Å†Å†}
+Å†Å†Å†Å†Å†Å†Å†Å†line.start();
+Å†Å†Å†Å†Å†Å†Å†Å†Fenetre.begin=true;
+Å†Å†Å†Å†Å†Å†Å†Å†try {
+Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†byte bytes[] = new byte[1024];
+Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†int bytesRead=0;
+Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†while ((bytesRead = audioInputStream.read(bytes, 0, bytes.length)) != -1) {
+Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†line.write(bytes, 0, bytesRead);
+Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†}
+Å†Å†Å†Å†Å†Å†Å†Å†} catch (IOException io) {
+Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†io.printStackTrace();
+Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†return;
+Å†Å†Å†Å†Å†Å†Å†Å†}
+Å†Å†Å†Å†}
+}

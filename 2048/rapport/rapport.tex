@@ -1,0 +1,50 @@
+\documentclass[a4paper]{article}
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{ucs}
+\usepackage{exemple}
+\usepackage{graphicx}
+\usepackage{MnSymbol,wasysym}
+\usepackage{hyperref}
+
+
+\formation{L3MI}
+\date{22 Janvier 2017}
+\matiere{Conception Orientée Objet}
+\titre{2048}
+
+\newcommand\code[1]{\textsf{#1}}
+\newcommand\srdjan[1]{{\color{red} #1}}
+
+\begin{document}
+
+\entete
+
+\section{Explication générale}
+
+
+
+\subsection{Difficultés}
+
+Trois points centraux m'ont posés des difficultés dans ce projet.
+Le premier est entièrement de ma faute puisque j'ai essayé pour me mettre un défi de réaliser un 2048 complétement basique sans menu le plus rapidement possible, seulement, une fois le défi personnel réalisé, on se rend compte que la non évolutivité du code et de sa mauvaise organisation, et lorsqu'il s'agit de continuer l'application et surtout de ce concentré sur une partie IA, cela pose de gros prbolèmes puisqu'ils faut débug du code pas du tout evolulutif, j'ai donc passé pas mal de temps à corriger de petits erreurs et à restructurer le tout.
+
+L'autres point et qui va directement rejoindre le dernier et le manque de temps, n'étant pas disponible le week end du rendu, j'ai eu beaucoup moins de temps pour réfléchir à mon IA ce qui ne m'a pas permis d'en développer une qui me contient et qui permet de résoudre le 2048. Cela m'a cependant quand même permis d'apprendre pas mal de choses.
+
+Le point qui m'a bloqué sur l'IA, autre que le temps est la méthode de valuation de ma grille. En effet, l'algorithme de l'IA principale est la méthode permettant de savoir comment une grille est meilleure qu'une autre à un instant T et n'ayant presque jamais joué à 2048 je ne connaissais pas les règles pour un humain pour espérer faire 2048. Et je pense que c'est l'un des points qui me bloque dans mon IA puisque si l'algorithme n'arrive pas à déterminer quelle est la meilleure grille via ces règles, il est plus difficile de réaliser de bons scores.
+
+\subsection{Graphisme}
+
+Il n'y a pas grand chose à dire sur le point graphique, j'ai essayé de représenter assez fidélement le jeu 2048 au niveau des couleurs et de l'organisation des menus, et je pense que ce projet est globalement beaucoup plus propre que le pendu rendu la semaine dernière.
+
+
+\subsection{Utilisation}
+
+Rien de très compliqué sur l'utilisation, on dispose d'un menu basique au démarrage de l'application permettant de pouvoir choisir entre jouer en tant qu'humain, regarder une IA jouer, ou quitter l'application.
+On peut a tout moment appuyer sur Echap pour quitter l'application, appuyer sur 'j' pour relancer une partie, appuier sur 'j' pour ouvrir la page d'aide et finalement appuyer sur 'm' pour revenir au menu principal.
+
+\section{Ajouts}
+
+Au niveau ajout, un IA était en cours de réalisation mais je n'ai malheureusement pas pu la finir, on peut toutefois changer très facilement dans le code la stratégie aborder par l'IA via l'utilisation du design pattern Stratégie, on a ainsi 3 stratégies présent dans le jeu, avec l'aléatoire, la stratégie de toujours jouer que sur 2 directions, et lorsque celles-ci ne sont plus disponibles, on essaye une autre direction au hasard, et la dernière IA qu'on pourrait appeler IA optimale qui va, quand à elle, réaliser des parties en interne pour déterminer la meilleure grille possible mais il manque l'évaluation avec la monoticité que je n'ai pas pu finir d'implémenter le l'optimisation.
+
+\end{document}

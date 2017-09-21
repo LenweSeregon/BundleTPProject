@@ -1,0 +1,42 @@
+\documentclass[a4paper]{article}
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{ucs}
+\usepackage{exemple}
+\usepackage{graphicx}
+\usepackage{MnSymbol,wasysym}
+\usepackage{hyperref}
+\formation{L3MI}
+\date{19 Janvier 2017}
+\matiere{Conception Orientée Objet}
+\titre{2048}
+
+\newcommand\code[1]{\textsf{#1}}
+\newcommand\srdjan[1]{{\color{red} #1}}
+
+\begin{document}
+
+\entete
+
+\section{Explication générale}
+
+
+
+\subsection{Difficultés}
+
+
+
+\subsection{Graphisme}
+
+
+
+
+\subsection{Utilisation}
+
+
+
+\section{Ajouts}
+
+
+
+\end{document}

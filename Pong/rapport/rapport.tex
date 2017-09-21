@@ -1,0 +1,43 @@
+\documentclass[a4paper]{article}
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{ucs}
+\usepackage{exemple}
+\usepackage{graphicx}
+\usepackage{MnSymbol,wasysym}
+\usepackage{hyperref}
+
+
+\formation{L3MI}
+\date{19 Janvier 2017}
+\matiere{Conception Orientée Objet}
+\titre{Pong}
+
+\newcommand\code[1]{\textsf{#1}}
+\newcommand\srdjan[1]{{\color{red} #1}}
+
+\begin{document}
+
+\entete
+
+\section{Explication générale}
+
+\subsection{Difficultés}
+
+La difficulté pour ce TP a été l'organisation et de ce fait la perte de temps lors de la découpe de mon projet ce qui ne m'a pas permis de réaliser une IA pour le pong alors que celle-ci ne semble pas très compliqué, en simulant simplement la trajectoire de la balle et sa positon a un instant T, on pouvait déterminer à quelle endroit l'intelligence artificelle devait se déplacer pour ne pas perdre mais par manque de temps et par choix, j'ai décidé de me concentré sur la partie MVC pour m'améliorer par rapport à la dernière fois et je suis assez satisfait sur ce point pour ce projet, j'ai réellement découper mon projet en MVC en ayant des entités spécialement graphique qui sont utilisé dans la vue.
+
+\subsection{Graphisme}
+
+Encore une fois, et tout spécialement pour ce projet, il n'y a rien à dire sur le graphisme du jeu puisque le pong est pas nature très neutre comme jeu. La seule touche graphique apporté est un bonus proposé dans le tp avec les effets de déplacements des balles
+
+
+\subsection{Utilisation}
+
+Pour jouer, le joueur de gauche doit utiliser la touche 'z' pour monter et 's' pour descendre sa raquette, quand le joueur de droite doit utiliser sa touche 'fléche du haut' pour monter et 'fléche du bas'
+ pour descendre sa raquette. 
+\section{Ajouts}
+
+Toutes les options proposés ont été réalisé sauf l'IA, le son est en place, le mécanisme de bonus est en place et opérationelle, mais par manque de temps, je n'ai réalisé qu'un seul bonus qui est le bonus de création d'une deuxième balle et qui est représenté graphiquement par un cercle avec un 'B' dedans comme 'Balle'.
+Ce bonus est crée a chaque début de manche.
+
+\end{document}

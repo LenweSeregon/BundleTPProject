@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plateau>
+    <ai>true</ai>
+    <turn>noir</turn>
+    
+    <element>
+        <i>0</i>
+        <j>0</j>
+        <owner>none</owner>
+    </element>
+    
+    <element>
+        <i>0</i>
+        <j>1</j>
+        <owner>none</owner>
+    </element>
+    
+    <element><i>0</i><j>2</j><owner>none</owner></element><element><i>0</i><j>3</j><owner>none</owner></element><element><i>0</i><j>4</j><owner>none</owner></element><element><i>0</i><j>5</j><owner>none</owner></element><element><i>0</i><j>6</j><owner>none</owner></element><element><i>0</i><j>7</j><owner>none</owner></element><element><i>1</i><j>0</j><owner>none</owner></element><element><i>1</i><j>1</j><owner>none</owner></element><element><i>1</i><j>2</j><owner>none</owner></element><element><i>1</i><j>3</j><owner>none</owner></element><element><i>1</i><j>4</j><owner>none</owner></element><element><i>1</i><j>5</j><owner>none</owner></element><element><i>1</i><j>6</j><owner>none</owner></element><element><i>1</i><j>7</j><owner>none</owner></element><element><i>2</i><j>0</j><owner>none</owner></element><element><i>2</i><j>1</j><owner>none</owner></element><element><i>2</i><j>2</j><owner>none</owner></element><element><i>2</i><j>3</j><owner>noir</owner></element><element><i>2</i><j>4</j><owner>blanc</owner></element><element><i>2</i><j>5</j><owner>none</owner></element><element><i>2</i><j>6</j><owner>none</owner></element><element><i>2</i><j>7</j><owner>none</owner></element><element><i>3</i><j>0</j><owner>none</owner></element><element><i>3</i><j>1</j><owner>none</owner></element><element><i>3</i><j>2</j><owner>none</owner></element><element><i>3</i><j>3</j><owner>noir</owner></element><element><i>3</i><j>4</j><owner>noir</owner></element><element><i>3</i><j>5</j><owner>blanc</owner></element><element><i>3</i><j>6</j><owner>none</owner></element><element><i>3</i><j>7</j><owner>none</owner></element><element><i>4</i><j>0</j><owner>none</owner></element><element><i>4</i><j>1</j><owner>none</owner></element><element><i>4</i><j>2</j><owner>none</owner></element><element><i>4</i><j>3</j><owner>noir</owner></element><element><i>4</i><j>4</j><owner>blanc</owner></element><element><i>4</i><j>5</j><owner>none</owner></element><element><i>4</i><j>6</j><owner>blanc</owner></element><element><i>4</i><j>7</j><owner>none</owner></element><element><i>5</i><j>0</j><owner>none</owner></element><element><i>5</i><j>1</j><owner>none</owner></element><element><i>5</i><j>2</j><owner>none</owner></element><element><i>5</i><j>3</j><owner>none</owner></element><element><i>5</i><j>4</j><owner>none</owner></element><element><i>5</i><j>5</j><owner>none</owner></element><element><i>5</i><j>6</j><owner>none</owner></element><element><i>5</i><j>7</j><owner>none</owner></element><element><i>6</i><j>0</j><owner>none</owner></element><element><i>6</i><j>1</j><owner>none</owner></element><element><i>6</i><j>2</j><owner>none</owner></element><element><i>6</i><j>3</j><owner>none</owner></element><element><i>6</i><j>4</j><owner>none</owner></element><element><i>6</i><j>5</j><owner>none</owner></element><element><i>6</i><j>6</j><owner>none</owner></element><element><i>6</i><j>7</j><owner>none</owner></element><element><i>7</i><j>0</j><owner>none</owner></element><element><i>7</i><j>1</j><owner>none</owner></element><element><i>7</i><j>2</j><owner>none</owner></element><element><i>7</i><j>3</j><owner>none</owner></element><element><i>7</i><j>4</j><owner>none</owner></element><element><i>7</i><j>5</j><owner>none</owner></element><element><i>7</i><j>6</j><owner>none</owner></element><element><i>7</i><j>7</j><owner>none</owner></element></plateau>

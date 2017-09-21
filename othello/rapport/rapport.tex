@@ -1,0 +1,49 @@
+\documentclass[a4paper]{article}
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{ucs}
+\usepackage{exemple}
+\usepackage{graphicx}
+\usepackage{MnSymbol,wasysym}
+\usepackage{hyperref}
+
+
+\formation{L3MI}
+\date{20 mars 2017}
+\matiere{Conception Orientée Objet}
+\titre{Othello}
+
+\newcommand\code[1]{\textsf{#1}}
+\newcommand\srdjan[1]{{\color{red} #1}}
+
+\begin{document}
+
+\entete
+
+\section{Explication générale}
+
+
+\subsection{Difficultés}
+
+Je n'ai pas rencontré de réellement difficulté pendant ce projet. La seule petite difficulté présente à été de bien agencé le plateau pour avoir quelque chose d'esthétiquement très propre de l'othello ! Niveau algorithmique, pas vraiment de soucis, cela c'est passé sans encombre et je pense que mes algorithmes sont bien optimisés.
+
+Malheureusement, par manque de temps, fin de semestre oblige, je me suis contenté de réaliser l'IA aléatoirement seulement. Cependant, tout est bien découpé et peut se prêter assez facilement à une IA de parcours en profondeur.
+
+\subsection{Graphisme}
+
+Il n'y a pas vraiment grand chose à dire au niveau graphisme, le jeu othello étant un jeu graphiquement très simple, j'ai repris les mêmes couleurs que le jeu original. J'ai enlevé les contours de la fenêtre pour faire plus propre et j'ai mis une JMenuBar comme demandé dans le sujet.
+
+
+\subsection{Utilisation}
+
+L'utilisation est la plus limpide possible. A chaque tour, le plateau annonce en bas de sa fenêtre c'est au tour de quel joueur de jouer. Les coups possibles sont calculés et affichés à l'aide de petite ronds blancs non colorié sur la grille. On clique avec la souris pour choisir un endroit ou placé son pion parmis les coups possibles.
+
+On peut sauvegarder une partie en cours via la JMenuBar, et on peut la charger de la même manière à partir de la fenêtre du menu ou avec le bouton "charger".
+
+Lorsqu'on joueur ne peut pas jouer, un message s'affiche et s'enlève au bout d'1 seconde 50, et pareil lorsqu'un des joueurs à gagner, le message indiquant le vainqueur s'affiche, puis on est renvoyé vers la menu de départ
+
+\section{Ajouts}
+
+Le jeu semble le plus fidéle possible à l'original, le code est découpé de manière objet et l'AI aléatoire est implémenté.
+
+\end{document}

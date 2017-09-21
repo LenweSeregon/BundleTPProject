@@ -1,0 +1,44 @@
+\documentclass[a4paper]{article}
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{ucs}
+\usepackage{exemple}
+\usepackage{graphicx}
+\usepackage{MnSymbol,wasysym}
+\usepackage{hyperref}
+
+
+\formation{L3MI}
+\date{19 Janvier 2017}
+\matiere{Conception Orientée Objet}
+\titre{Bataille navale en réseau}
+
+\newcommand\code[1]{\textsf{#1}}
+\newcommand\srdjan[1]{{\color{red} #1}}
+
+\begin{document}
+
+\entete
+
+\section{Explication générale}
+
+\subsection{Difficultés}
+
+La principale difficulté pour ce tp a été la compréhension et la mise en place d'une communication 2 clients / 1 serveur. En effet, c'était pour moi la première fois que je mettais en place un tel protocole quelque soit le langage et je me suis ainsi mis une difficulté tout seul. En effet voulant faire trop de choses, mon serveur est presque capable de gérer plusieurs parties de manière simultanée. Il reste les bugs lorsqu'un client quitte prématurément le serveur, mais la communication entre les différents joueurs est opérations et le serveur est le plus générique possible et pourrait même presque permettre de jouer à d'autres jeux et à plus de 2 joueurs si on le veut comme on peut le voir dans le code.
+
+\subsection{Graphisme}
+
+Niveau graphique, je suis assez satisfait de ma partie serveur que je trouve assez esthétique. Malheuresement par manque de temps comme expliqué dans les difficultés, je n'ai pas plus réalisé une belle interface pour les clients.
+Sinon pour le serveur, on a toutes les informations dont on a besoin
+
+
+\subsection{Utilisation}
+
+Pour utiliser le serveur, il suffit de tout d'abord lancer le serveur avec un port valide, et d'ensuite lancer 2 clients que l'on connecte au port du serveur et à l'adresse 'localhost' ou '127.0.0.1'. Les joueurs ont ensuite leurs bateaux placés au hasard. Les joueurs doivent envoyer 'Pret' en appuyant sur le bouton. Le serveur répondra par un 'GO x' avec x l'assignation du tour de jeu du joueur. La partie peut ensuite commencer et pour jouer il suffit de cliquer sur une case de la grille adverse qui est en face.
+Tout semble sinon fonctionner dans la communication client - serveur - client, les messages permettent de savoir à chaque tour qui doit jouer et j'ai réalisé une animation qui dit si on a été touché ou si un bombardement a raté, a la fin de la partie, les joueurs sont notifés de leur victoire/défaite
+
+\section{Ajouts}
+Comme expliqué dans les difficultés au niveau ajout, j'ai réalisé un serveur le plus générique possible qui peut presque lancer plusieurs parties, et gérer plusieurs joueurs et une file de connexion comme on peut le voir en regardant le code.
+Et j'ai lancé 2 clients qui se connecte sur 1 serveur.
+
+\end{document}
